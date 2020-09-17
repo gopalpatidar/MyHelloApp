@@ -1,7 +1,7 @@
-plugins {
-    id 'com.android.application'
-    id 'com.github.triplet.play' version '2.1.0'
-}
+// plugins {
+//     id 'com.android.application'
+//     id 'com.github.triplet.play' version '2.1.0'
+// }
 apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
@@ -96,11 +96,11 @@ apply from: "../../node_modules/react-native/react.gradle"
  * the correct one based on the CPU architecture of their device.
  */
 def enableSeparateBuildPerCPUArchitecture = true
-def path = 'false'
-if(project.gradle.startParameter.projectProperties.p12Path){
-   path = project.gradle.startParameter.projectProperties.p12Path
-   println path
-}
+// def path = 'false'
+// if(project.gradle.startParameter.projectProperties.p12Path){
+//    path = project.gradle.startParameter.projectProperties.p12Path
+//    println path
+// }
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
@@ -140,14 +140,14 @@ android {
         applicationId "com.daffodil.myhelloapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.2"
     }
-     play {
-    track = 'beta' //'alpha','beta' or 'production'
-    serviceAccountEmail = "myapi-402@api-5642029094342727128-217179.iam.gserviceaccount.com"
-    serviceAccountCredentials = file(path)
-    }
+    //  play {
+    // track = 'beta' //'alpha','beta' or 'production'
+    // serviceAccountEmail = "myapi-402@api-5642029094342727128-217179.iam.gserviceaccount.com"
+    // serviceAccountCredentials = file(path)
+    // }
 
     splits {
         abi {
